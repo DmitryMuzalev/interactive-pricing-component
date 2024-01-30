@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "./components/Container";
+import { PricingComponent } from "./components/PricingComponent";
+import { Title } from "./components/Title";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Title />
+      <PricingComponent />
+    </Container>
   );
 }
 
 export default App;
+
+/* 
+10K pageviews / $8 per month
+50K pageviews / $12 per month
+100K pageviews / $16 per month
+500k pageviews / $24 per month
+1M pageviews / $36 per month
+*/
