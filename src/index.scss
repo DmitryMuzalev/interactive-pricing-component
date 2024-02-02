@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -13,21 +13,84 @@
   //_Color:
   --white: #ffffff; // Pricing Component Background
 
-  --cyan-100: hsl(174, 77%, 80%); // Full Slider Bar
-  --cyan-200: hsl(174, 86%, 45%); // Slider Backround
+  --cyan-100: #a5f3eb; // Full Slider Bar
+  --cyan-150: #7aeade; // Slider Backround Hover
+  --cyan-200: #10d5c2; // Slider Backround
+  --cyan-300: #22aea1; // Slider Backround Active
 
-  --red-100: hsl(14, 92%, 95%); //Discount Background
-  --red-200: hsl(15, 100%, 70%); //Discount Text
+  --red-100: #feece7; //Discount Background
+  --red-200: #ff8c66; //Discount Text
 
-  --blue-100: hsl(230, 100%, 99%); // Main Background
-  --blue-200: hsl(224, 65%, 95%); //Empty Slider Bar
-  --blue-300: hsl(223, 50%, 87%); //Toggle Background
-  --blue-400: hsl(226, 100%, 87%); //CTA Text
-  --blue-500: hsl(225, 20%, 60%); //Text
-  --blue-600: hsl(227, 35%, 25%); // (Text & CTA Background)
+  --blue-100: #fafbff; // Main Background
+  --blue-200: #eaeefb; //Empty Slider Bar
+  --blue-300: #cdd7ee; //Toggle Background
+  --blue-400: #bdccff; //CTA Text
+  --blue-500: #858fad; //Text
+  --blue-600: #293356; // (Text & CTA Background)
+
+  //_Border radius
+  --br-main: 0.5rem;
 }
 
 body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-100);
+  background-image: url("./assets/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 100% 56.25%;
+  min-height: 100vh;
   font-family: var(--f-family);
+  font-weight: 600;
   color: var(--blue-500);
+}
+
+ul {
+  list-style: none;
+}
+
+.block {
+  padding: 0 25px;
+
+  @media (min-width: 767px) {
+    padding: 0 50px;
+  }
+}
+
+.discount {
+  font-size: 0.75rem;
+  color: var(--red-200);
+  border-radius: 1rem;
+  background-color: var(--red-100);
+  padding: 0.3em 0.5em;
+
+  span {
+    display: none;
+  }
+
+  @media (min-width: 767px) {
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: var(--blue-600);
+  color: var(--blue-400);
+  border: none;
+  height: 2.5rem;
+  padding: 0 2.5rem;
+  border-radius: 1.5rem;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--white);
+  }
 }

@@ -1,0 +1,39 @@
+.ctaContainer {
+  border-top: 1px solid var(--blue-200);
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  button {
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  ul {
+    align-items: center;
+  }
+
+  @media (min-width: 767px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    ul {
+      align-items: start;
+    }
+  }
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+
+  li {
+    font-size: 0.875rem;
+    padding-left: 2rem;
+    background-image: url("../../assets/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+  }
+}
